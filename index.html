@@ -44,26 +44,27 @@
         </form>
 
 
-        <form class="form-content" id="form-step2" style="display:none;">
+        <form class="form-content" id="form-step2" style="display: none;">
             <h2>Step 2</h2>
 
-            <div class="text username">
+            <div class=" text username">
                 <label class="username" for="username">Username</label>
                 <input type="text" name="username" class="text-input" id="username" placeholder="Enter your name">
-                <div id="username-error" class="error-message" style="display:none;">Only letters are allowed.</div>
+                <p id="username-error" class="error-message"> Only letters are allowed.</p>
             </div>
 
             <div class="text password">
                 <label for="password">Password</label>
                 <input type="password" id="password" class="text-input" placeholder="Enter password">
-                <div id="password-error" style="color: red; display: none;">Password must be atleast 8 characters.</div>
+                <p id="password-error" class="error-message">Password must be atleast 8
+                    characters.</p>
             </div>
 
             <div class="text confirm-password">
                 <label for="confirmPassword">Confirm Password</label>
                 <input type="password" class="text-input" name="confirmpassword" id="confirmPassword"
                     placeholder="type your password again">
-                <p id="message" style="color:red;"></p>
+                <p id="message"></p>
             </div>
 
             <div class="remember-me">
@@ -71,8 +72,8 @@
                     <input type="checkbox" class="rememberMe-chkbox" id="remember-Me">
                     <span class="label-text">Please tick the box to agree with terms and conditions.</span>
                 </label>
-                <div id="checkbox-error" style="color: red; display: none;">You must agree with the terms and
-                    conditions.</div>
+                <p id="checkbox-error" style="color: red; opacity: 0;">You must agree with the terms and
+                    conditions.</p>
             </div>
 
             <!-- Radios -->
@@ -96,7 +97,7 @@
                     <span class="custom-circle"></span>
                     <span class="label-text">Radio Button 3</span>
                 </label>
-                <div id="error-msg" style="color:red ; font-size: 12px;margin-top: 10px;"></div>
+                <p id="error-msg" class="radio-error"></p>
             </div>
 
             <!-- Dropdown -->
@@ -107,12 +108,12 @@
                     <option value="opt1">Opt 1</option>
                     <option value="opt2">Opt 2</option>
                 </select>
-                <div id="dropdown-error" style="color:red; margin-top: 10px;font-size: 12px;"></div>
+                <p id="dropdown-error" class="drop-error"></p>
             </div>
 
             <div class="button-row">
-                <button type="button" id="backBtn" class="btn-cancel">⬅️ Back</button>
-                <button type="submit" class="btn-submit">Submit ✅</button>
+                <button type="button" id="backBtn"> Back</button>
+                <button type="submit" class="btn-submit">Submit </button>
             </div>
         </form>
     </div>
