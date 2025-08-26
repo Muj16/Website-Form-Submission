@@ -9,28 +9,112 @@
 </head>
 
 <body>
-    <div class="form-container">
-        <div class="form-conten" id="Form-Step1"></div>
-        <div>
-            <h1> Step1</h1>
+    <div class="form-wrapper">
+        <form class="form-content" id="form-step1">
+            <h2>Step 1</h2>
 
-        </div>
-        <div class="firstname">
-            <label for="firstname"> First Name</label>
-            <input type="text" name="" id="firstname" placeholder="Enter Your First Name">
-        </div>
-        <div class="lastName">
-            <label for="lastName"> Last Name</label>
-            <input type="text" name="" id="lastName" placeholder="Enter Your Last Name">
-        </div>
-        <div class="Address">
-            <label for="Address"> Address</label>
-            <input type="Address" name="" id="" placeholder="Enter Your Address">
-        </div>
-        <div class="Phone">
-            <label for="phone"> Phone No</label>
-            <input type="phone" name="" id="" placeholder="Enter Your Phone No">
-        </div>
+            <div class="text firstName">
+                <label class="username" for="firstName">First Name</label>
+                <input type="text" name="firstName" class="text-input" id="firstName"
+                    placeholder="Enter your firstName">
+                <p id="error-text" class="error-message"> First name must contain only alphabets.</p>
+            </div>
+
+            <div class="text lastName">
+                <label class="username" for="lastName">Last Name</label>
+                <input type="text" name="lastName" minlength="4" maxlength="30" class="text-input" id="lastName"
+                    placeholder="Enter your lastName">
+                <p id="lastName-error" class="error-message"> Last name must contain only alphabets.</p>
+            </div>
+
+            <div class="text Address">
+                <label class="username" for="Address">Address</label>
+                <input type="text" name="Address" class="text-input" id="Address" placeholder="Enter your Address">
+                <p id="Address-error" class="error-message">This field cannot be empty.</p>
+            </div>
+
+            <div class="text Phone">
+                <label class="username" for="Phone">Phone</label>
+                <input type="Tel" class="text-input" value="+92" id="Phone" placeholder="+92xxxxxxxxxx">
+                <p id="phone-error" class="error-message"> "Phone must be in format +92XXXXXXXXXX" </p>
+            </div>
+            <div class="button-row">
+                <button type="submit" class="btn-submit">Next </button>
+            </div>
+        </form>
+
+
+        <form class="form-content" id="form-step2" style="display:none;">
+            <h2>Step 2</h2>
+
+            <div class="text username">
+                <label class="username" for="username">Username</label>
+                <input type="text" name="username" class="text-input" id="username" placeholder="Enter your name">
+                <div id="username-error" class="error-message" style="display:none;">Only letters are allowed.</div>
+            </div>
+
+            <div class="text password">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="text-input" placeholder="Enter password">
+                <div id="password-error" style="color: red; display: none;">Password must be atleast 8 characters.</div>
+            </div>
+
+            <div class="text confirm-password">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" class="text-input" name="confirmpassword" id="confirmPassword"
+                    placeholder="type your password again">
+                <p id="message" style="color:red;"></p>
+            </div>
+
+            <div class="remember-me">
+                <label for="remember-Me">
+                    <input type="checkbox" class="rememberMe-chkbox" id="remember-Me">
+                    <span class="label-text">Please tick the box to agree with terms and conditions.</span>
+                </label>
+                <div id="checkbox-error" style="color: red; display: none;">You must agree with the terms and
+                    conditions.</div>
+            </div>
+
+            <!-- Radios -->
+            <div class="radio-btns">
+                <label class="circle-checkbox">
+                    <input type="radio" name="choice" value="option1" checked>
+                    <span class="custom-circle"></span>
+                    <span class="label-text">Radio Button 1</span>
+                </label>
+            </div>
+            <div class="radio-btns">
+                <label class="circle-checkbox">
+                    <input type="radio" name="choice" value="option2" id="rd2">
+                    <span class="custom-circle"></span>
+                    <span class="label-text">Radio Button 2</span>
+                </label>
+            </div>
+            <div class="radio-btns">
+                <label class="circle-checkbox">
+                    <input type="radio" name="choice" value="option3" id="rd3">
+                    <span class="custom-circle"></span>
+                    <span class="label-text">Radio Button 3</span>
+                </label>
+                <div id="error-msg" style="color:red ; font-size: 12px;margin-top: 10px;"></div>
+            </div>
+
+            <!-- Dropdown -->
+            <div class="dropdown-container">
+                <label class="dropdown-label" for="dropdown">Dropdown Title</label>
+                <select class="dropdown" id="dropdown">
+                    <option value="">Select option</option>
+                    <option value="opt1">Opt 1</option>
+                    <option value="opt2">Opt 2</option>
+                </select>
+                <div id="dropdown-error" style="color:red; margin-top: 10px;font-size: 12px;"></div>
+            </div>
+
+            <div class="button-row">
+                <button type="button" id="backBtn" class="btn-cancel">⬅️ Back</button>
+                <button type="submit" class="btn-submit">Submit ✅</button>
+            </div>
+        </form>
     </div>
     <script src="script.js"></script>
 </body>

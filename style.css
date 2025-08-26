@@ -11,3 +11,70 @@ body {
     align-items: center;
     background-color: #e8dffb;
 }
+
+.text-input {
+    width: 500px;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid #cccc;
+    padding: 10px;
+
+}
+
+.error-message {
+    color: red;
+    width: 250px;
+    height: 20px;
+    font-size: 10px;
+    margin-top: 0px;
+    opacity: 0;
+    /* hidden by default */
+}
+
+.form-wrapper {
+    background-color: white;
+    padding: 30px 100px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    max-height: 620px;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.text {
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: #666;
+
+}
+
+.error-message {
+    color: red;
+}
+
+.helping-text-user {
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0%;
+    line-height: 18px;
+}
+
+.btn-submit {
+    border: none;
+    background: #8a5fff;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
